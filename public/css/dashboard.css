@@ -1,0 +1,161 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #121212; 
+    color: #ffffff; 
+    transition: background-color 0.3s ease; 
+}
+
+.container {
+    display: flex;
+    height: 100vh; 
+    transition: transform 0.3s ease; 
+}
+
+.side-panel {
+    width: 200px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: width 0.3s ease, padding 0.3s ease; 
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.side-panel.hidden {
+    width: 0;
+    padding: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.side-panel ul {
+    list-style-type: none;
+    padding: 0;
+    transition: opacity 0.3s ease;  
+    flex-grow: 1;  
+}
+
+.side-panel.hidden ul {
+    opacity: 0;  
+}
+
+.side-panel li {
+    margin: 15px 0;
+}
+
+.side-panel button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #1e1e1e;
+        color: white;
+        position: relative;
+        z-index: 1; 
+        margin: 5px; 
+        overflow: hidden;
+    }
+.side-panel button::before,
+.side-panel button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+    z-index: -1;
+}
+
+.side-panel button::before {
+    content: '>';
+    font-size: 18px;
+    left: -40px;  
+}
+
+.side-panel button::after {
+    content: '<'; 
+    font-size: 18px;
+    right: -40px;
+}
+
+.side-panel button:hover::before {
+    left: 3px;
+    font-size: 18px;
+    opacity: 1;  
+}
+
+.side-panel button:hover::after {
+    right: 3px; 
+    font-size: 18px;
+    opacity: 1; 
+}
+
+.side-panel button:hover {
+    z-index: 2; 
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;  
+}
+
+.main-content.expanded {
+    margin-left: 0;  
+}
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-3px, 0); }
+    50% { transform: translate(3px, 0); }
+    75% { transform: translate(-3px, 0); }
+    100% { transform: translate(0); }
+}
+
+.toggle-button {
+    position: fixed;  
+    bottom: 20px;  
+    left: 20px;  
+    padding: 10px;  
+    height: 50px;  
+    width: 50px;  
+    background-color: #28a745;  
+    color: white;
+    border: none;
+    border-radius: 50%;  
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    z-index: 1000;  
+}
+
+ 
+.toggle-button:active {
+    animation: shake 0.3s;  
+}
+
+.toggle-button:hover {
+    background-color: #218838;  
+}
+
+ 
+.toggle-button i {
+    font-size: 20px;  
+    margin: 0;  
+}
