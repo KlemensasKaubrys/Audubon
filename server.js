@@ -11,7 +11,7 @@ const options = {
     cert: fs.readFileSync('server.cert'),
   };
 
-const PORT = 443;
+const PORT = 3000;
 
 // Serving the favicon
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
