@@ -18,8 +18,8 @@ const PORT = 443;
 // TODO: Once I start Using this code actually set up a cerbot instance to get cert auth.
 // Load SSL certificate and private key.
 const options = {
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert'),
+    key: fs.readFileSync('server-key.pem'),
+    cert: fs.readFileSync('server-cert.pem'),
 };
 
 // Serving the favicon.
