@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="icon" href="favicon.ico"> <!-- Favicon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="css/dashboard.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="side-panel">
-            <div class="sidebar-header">
-                <img src="favicon.ico" alt="Logo" style="width: 30px; height: 30px; vertical-align: middle;">
-                <span style="margin-left: 10px; font-weight: bold;">Audubon</span>
-            </div>
-            <ul>
-                <li><button onclick="loadPage('home')">Home</button></li>
-                <li><button onclick="loadPage('sine-wave')">Sine Wave</button></li>
-            </ul>
-        </div>
-        <div class="main-content" id="main-content">
-            <h1>Dashboard Home</h1>
-            <p>Welcome to the dashboard!</p>
-        </div>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="favicon.ico" alt="logo" />
     </div>
-    <button class="toggle-button" onclick="toggleSidebar()">
-        <i id="toggle-icon" class="fa-solid fa-circle-arrow-right"></i>
-    </button>
-    <script src="js/dashboard_load.js"></script>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Projects</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="https://km-sk.com/dashboard/manifesto"><span class="material-symbols-outlined"> star </span>The manifesto</a>
+      </li>
+
+      <h4>
+        <span>Account</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="https://km-sk.com/dashboard"><span class="material-symbols-outlined"> Dashboard </span>Dashboard</a>
+      </li>
+      <li>
+        <a href="https://km-sk.com/login"><span class="material-symbols-outlined"> logout </span>Log out</a>
+      </li>      
+    </ul>
+  </aside>
+  <main class="content">
+    <h1> Zhe dashboard </h1>
+    There is nothing here, go look at the manifesto.
+  </main>
 </body>
 </html>
