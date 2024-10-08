@@ -92,6 +92,9 @@ app.get('/dashboard', isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
 });
 
+app.get('/dashboard/manifesto', isAuthenticated, (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'manifesto.html'));
+});
 
 app.get('/logout', (req, res) => {
   req.logout((err) => {
